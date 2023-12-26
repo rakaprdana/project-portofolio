@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="website icon" type="png" href="/assets/profile3.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button class="burger" onclick="toggleMenu()"></button>
+    <div class="background"></div>
+    <div class="menu">
+      <nav>
+        <a style="animation-delay: 0.2s" href="/schedule.html">My Schedule</a>
+        <a style="animation-delay: 0.3s" href="activitys/activitys.html">Activity</a>
+      </nav>
+    </div>
+    <section class="banner">
+      <img src="assets/profile4.png" alt="profile"/>
+      <div class="banner-content">
+        <h2>Hello, I'm Raka</h2>
+        <p>
+          I am a vocational school graduate majoring in Computer and Network Engineering. I have experience in using a proxy router, CISCO Packet Tracer, and have a little understanding of the Python programming language
+        </p>
+      </div>
+    </section>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <path
+          id="gentle-wave"
+          d="M-160 44c30 0 
+        58-18 88-18s
+        58 18 88 18 
+        58-18 88-18 
+        58 18 88 18
+        v44h-352z"
+        />
+      </defs>
+      <g class="waves">
+        <use
+          xlink:href="#gentle-wave"
+          x="50"
+          y="0"
+          fill="#03ffff"
+          fill-opacity=".2"
+        />
+        <use
+          xlink:href="#gentle-wave"
+          x="50"
+          y="3"
+          fill="#03ffff"
+          fill-opacity=".5"
+        />
+        <use
+          xlink:href="#gentle-wave"
+          x="50"
+          y="6"
+          fill="#03ffff"
+          fill-opacity=".9"
+        />
+      </g>
+    </svg>
+    <script type="text/javascript">
+      const toggleMenu = () => document.body.classList.toggle("open");
+    </script>
+  </body>
+</html>

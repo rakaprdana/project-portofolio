@@ -1,0 +1,219 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+section {
+  padding: 30px 15%;
+}
+
+@media (width <= 720px) {
+  section {
+    padding: 30px 10%;
+  }
+}
+
+
+table {
+width: 100%;
+border-collapse: collapse;
+
+}
+
+table .th1{
+border-collapse: collapse;
+background-color: #08697f;
+color: white;
+}
+
+table th, table td {
+padding: 10px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+
+
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.burger,
+.menu {
+  position: fixed;
+}
+
+.burger {
+  z-index: 4;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  background-image: url("menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body.open .burger {
+  background-image: url("close.svg");
+}
+
+.background {
+  position: fixed;
+  z-index: 2;
+  top: 44px;
+  left: 44px;
+  aspect-ratio: 1 / 1;
+  translate: -50% -50%;
+  height: 88px;
+  background: #07030a;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+body.open .background {
+  height: 300vh;
+  opacity: 0.8;
+}
+
+.menu {
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.05s;
+}
+
+.menu nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+}
+
+body.open .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+body .menu nav:hover > a {
+  opacity: 0.25;
+}
+
+body .menu nav > a:hover {
+  opacity: 1;
+  translate: 8px 0;
+}
+
+.menu a {
+  position: relative;
+  color: #f9f9f9;
+  font-size: 32px;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px 0 20px 20px;
+  text-decoration: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -26px;
+  translate: 0 -50%;
+  margin-top: 2px;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  opacity: 0;
+  rotate: 45deg;
+  transition: 0.3s;
+}
+
+.menu a:hover::after {
+  opacity: 1;
+}
+
+body.open .menu a {
+  opacity: 1;
+  animation: appear 0.35s backwards;
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  min-height: 40vw;
+  margin-bottom: 40px;
+}
+
+@media (width <= 620px) {
+  .banner {
+    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 200%;
+  height: 110%;
+  rotate: -2deg;
+  background: #1b1526;
+}
+
+.banner h2 {
+  white-space: nowrap;
+  margin: 0 0 4px;
+  font-size: 55px;
+  color: rgb(255 255 255 / 96%);
+}
+
+.banner h3 {
+  font-weight: 400;
+  margin: 0;
+  color: rgb(255 255 255 / 57%);
+}
+
+@keyframes morph {
+  0%,
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+}
+
+.banner img {
+  width: 440px;
+  height: 440px;
+  object-fit: cover;
+}
